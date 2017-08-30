@@ -1,24 +1,64 @@
 @media all and (min-width:300px) {
     body {
-        background-color: #ccc;  
+        background-color: #222;  
         text-align:  center;
+         -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
 
+    }
+    .container {
+        width:  100%;
+        margin:  0px auto;
+    }
+    header {
+        padding:  30px 0px;
+
+    }
+    header h1 {
+        line-height: 28px;
+        font-family: 'Montserrat', sans-serif;
+        text-transform:  uppercase;
+        font-weight:  bold;
+        font-size:  28px;
+        color:  white;
+        text-align:  center;
+    }
+    .player-col {
+        padding-top:  30px;
+        border-top:  5px solid #222;
+        text-align:  left;
+    }
+    .icon__color {
+        width:  25px;
+        height:  25px;
+        border-radius:  50%;
+        display: block;
+        float:  right;
+        border:  2px solid white;
+    }
+    .icon__color--black {
+        background-color:  black;
+    }
+    .icon__color--white {
+        background-color:  white;
+    }
+    .player-turn {
+        border-color:  yellow;
+    }
+    .player-col h2 {
+        color:  white;
+        font-family: 'Montserrat', sans-serif;
+        text-transform:  uppercase;
+        font-weight:  bold;
+        font-size:  20px;
+        color:  white;
     }
     #game {
         display: inline-block;
         background-color:  SandyBrown;
-        padding:  25px;
-        width:  572px;
+        width:  550px;
     }
-    .row:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-    .active {
-        background-color:  rgba(0,0,0,.1);
-    }
-    .tile {
+    .tile__item {
         width:  50px;
         height:  50px;
         float:  left;
@@ -28,46 +68,60 @@
         border-bottom:  1px solid #888;
         position:  relative;
     }
-    .row .tile:first-child {
+    .tile__item--corner {
+        background-color:  FireBrick;
+    }
+    .tile__item--corner:hover {
+        background-color:   #961d1d;
+    }
+    .tile__row:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .tile__row .tile__item:first-child {
         border-left:  1px solid #888;
     }
-    .row:first-child .tile {
+    .tile__row:first-child .tile__item {
          border-top:  1px solid #888;
     }
-    .tile:hover {
-        background-color: rgba(0,0,0,.1);
+    .tile__item--active {
+        background-color:  limegreen;
     }
-    .token {
+    .tile__move--possible {
+        background-color:  magenta;
+    }
+    .token__item {
         width: 40px;
         height:  40px;
         background-color:  pink;
         border-radius:  50%;
         cursor: pointer;
         margin:  5px;
+        box-sizing: border-box;
     }
-    .light {
+    .token__item--light {
         background-color:  white;
     }
-    .dark {
+    .token__item--dark {
         background-color:  black;
     }
-    .king {
+    .token__item--king {
         background-color:  gold;
     }
-    .corner {
-        background-color:  FireBrick;
-    }
-    .corner:hover {
-        background-color:   #961d1d;
-    }
+    
 
 
 } /* ------ mobile base styles end ------- */
 
 @media all and (min-width:700px) {
-  
+    .container {
+        width:  98%;
+    }
 } /* ------ tablet styles end ------- */
 
 @media all and (min-width:992px) {
-   
+   .container {
+        width:  960px;
+   }
 } /* ------ desktop styles end ------- */
